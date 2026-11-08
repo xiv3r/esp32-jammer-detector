@@ -5,30 +5,11 @@ Scans all 13 WiFi channels and watches for **deauthentication (0xA0)** and **dis
 - ESP32 board (with built-in LED on GPIO 1, or wire an external LED to GPIO 1)
 - USB cable
 
-## Software Required
-- Arduino IDE with **ESP32 board support** installed
-- `WiFi.h` and `esp_wifi.h` (included with the ESP32 core)
-
 ## Setup Steps
-
-1. **Install ESP32 board support**
-   - Arduino IDE → File → Preferences → Additional Board Manager URLs:
-     ```
-     https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-     ```
-   - Tools → Board → Boards Manager → search "esp32" → install.
-
-2. **Open the sketch**
-   - Paste the provided code into a new sketch (e.g. `esp32-detector.ino`).
-
-3. **Select board & port**
-   - Tools → Board → *ESP32 Dev Module* (or your specific board).
-   - Tools → Port → select the COM/USB port of your ESP32.
-
-4. **Upload**
-   - Click the Upload button (→). Wait for "Done uploading".
-
-5. **Run**
+1. **Download the firmware and flash, flash offset address is `0x0`**
+   - https://github.com/xiv3r/esp32-jammer-detector/raw/refs/heads/main/esp32-firmware-0x0.bin
+   
+2. **Run**
      - The device starts scanning automatically. No configuration needed.
 
 ## How to Read the LED
